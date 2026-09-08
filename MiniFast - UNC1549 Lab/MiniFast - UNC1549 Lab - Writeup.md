@@ -3,7 +3,7 @@
 ---
 ## Quick overview
 
-CyberDefenders lab based on investagating and analysing a network traffic PCAP, and reconstruction the attack chains through the bellow questions/responds.
+A CyberDefenders lab based on investigating and analyzing a network traffic PCAP, and reconstructing the attack chain through the questions below.
 
 ---
 
@@ -13,7 +13,7 @@ CyberDefenders lab based on investagating and analysing a network traffic PCAP, 
 
 **Q02/** 63.176.135.137
 
-we can answer Q1 and Q2 from wireshark resolved addresses
+We can answer Q1 and Q2 from Wireshark's resolved addresses.
 
 ![Icon](Images/cb0101.png)
 
@@ -21,17 +21,17 @@ we can answer Q1 and Q2 from wireshark resolved addresses
 
 **Q04/** E5DFF97693BE9D53E401B2DB84FF6D9C1808300876EE7C2C1FB4FC00AB7FB4FB
 
-the Q3 question get a little bit conmplicated, because the traffic is encrypted. i recommend to read a little bit about TLS encryption and its keys.
+Q03 is a bit more complicated, because the traffic is encrypted. I recommend reading up on TLS encryption and its keys before tackling this one.
 
-so first we get all the strings from msedge.DPM.
+First, we extract all the strings from msedge.DMP.
 
 ![Icon](Images/cb0102.png)
 
-we search for all the keys, and we copy them in another file, we upload that file into wireshark.
+We search for the TLS keys, copy them into a separate file, and load that file into Wireshark.
 
 ![Icon](Images/cb0103.png)
 
-then we can get the DLL file from HTTP export, since now its decrypted, and lastly we calcul its hash.
+Once the traffic is decrypted, we can extract the DLL file via HTTP export, and finally calculate its hash.
 
 ![Icon](Images/cb0104.png)
 
@@ -43,11 +43,11 @@ then we can get the DLL file from HTTP export, since now its decrypted, and last
 
 **Q06/** updates.getsqldeveloper.it.com
 
-got the Q06 before the Q05, by searching for any exe file in HTTP export
+I found Q06 before Q05, by searching for any .exe file in the HTTP export.
 
 ![Icon](Images/cb0105.png)
 
-and the IP address from VirusTotal
+The IP address for Q05 comes from VirusTotal.
 
 ![Icon](Images/cb0106.png)
 
@@ -61,7 +61,7 @@ and the IP address from VirusTotal
 
 **Q11/** 146
 
-the rest of question are in the are in HTTP stream 47
+The rest of the questions are answered in HTTP stream 47.
 
 ![Icon](Images/cb0107.png)
 
@@ -73,13 +73,13 @@ the rest of question are in the are in HTTP stream 47
 
 **Q13/** Administrator
 
-Q12 and Q13 same in HTTP stream 47
+Q12 and Q13 are both found in HTTP stream 47.
 
 ![Icon](Images/cb0108.png)
 
 **Q14/** 11
 
-in HTTP stream 99, there is double BASE64 encode, decode first round, you will seperate BASE64 parts, decode them again and you will get 11 commands 
+In HTTP stream 99, there is a double Base64 encoding. Decode the first round to separate the Base64 parts, then decode them again — you'll get 11 commands.
 
 ![Icon](Images/cb0109.png)
 
@@ -95,7 +95,7 @@ in HTTP stream 99, there is double BASE64 encode, decode first round, you will s
 
 **Q18/** sqldev-prod-01.corp.aero
 
-generally its PUT, so if you filter by HTTP.Request.method==PUT, and follow the founded stream 108, you can found all the answers.
+The method is generally PUT, so filter with `http.request.method == PUT`, follow the resulting stream (108), and you'll find all the answers there.
 
 ![Icon](Images/cb0110.png)
 
@@ -109,7 +109,7 @@ generally its PUT, so if you filter by HTTP.Request.method==PUT, and follow the 
 
 **Q20/** D13377117414E8E18498F5338E8B3474F8EC78729BF4DC880808824B0CEC41A2
 
-we get file from HTTP export, and calcul its hash
+We extract the file via HTTP export and calculate its hash.
 
 ![Icon](Images/cb0112.png)
 
@@ -117,7 +117,7 @@ we get file from HTTP export, and calcul its hash
 
 **Q22/** NoMatter
 
-by searching the hash in VirusTotal we can answer the two last questions
+Searching the hash on VirusTotal answers the last two questions.
 
 ![Icon](Images/cb0113.png)
 
