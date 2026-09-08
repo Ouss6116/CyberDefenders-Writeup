@@ -91,13 +91,13 @@ in HTTP stream 99, there is double BASE64 encode, decode first round, you will s
 
 **Q16/** db_export.sql
 
-![Icon](Images/cb0110.png)
-
 **Q17/** svc_crewsync:Av1@tion-Cr3w#2026
 
 **Q18/** sqldev-prod-01.corp.aero
 
 generally its PUT, so if you filter by HTTP.Request.method==PUT, and follow the founded stream 108, you can found all the answers.
+
+![Icon](Images/cb0110.png)
 
 ![Icon](Images/cb0111.png)
 
