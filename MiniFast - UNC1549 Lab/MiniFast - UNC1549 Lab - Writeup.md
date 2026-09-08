@@ -21,9 +21,9 @@ We can answer Q1 and Q2 from Wireshark's resolved addresses.
 
 **Q04/** E5DFF97693BE9D53E401B2DB84FF6D9C1808300876EE7C2C1FB4FC00AB7FB4FB
 
-Q03 is a bit more complicated, because the traffic is encrypted. I recommend reading up on TLS encryption and its keys before tackling this one.
+Q03 is a bit more complicated, because the traffic is encrypted. *I recommend reading up on TLS encryption and its keys before tackling this one.*
 
-First, we extract all the strings from msedge.DMP.
+First, we extract all the `strings` from msedge.DMP.
 
 ![Icon](Images/cb0102.png)
 
