@@ -21,13 +21,13 @@ we can answer Q1 and Q2 from wireshark resolved addresses
 
 **Q04/** E5DFF97693BE9D53E401B2DB84FF6D9C1808300876EE7C2C1FB4FC00AB7FB4FB
 
-the Q3 question get a little bit conmplicated, because the traffic is encrypted. so first we get all the strings from msedge.DPM.
+the Q3 question get a little bit conmplicated, because the traffic is encrypted. i recommend to read a little bit about TLS encryption and its keys.
+
+so first we get all the strings from msedge.DPM.
 
 ![Icon](Images/cb0102.png)
 
 we search for all the keys, and we copy them in another file, we upload that file into wireshark.
-
-- i recommend to read a little bit about TLS encryption and its keys -
 
 ![Icon](Images/cb0103.png)
 
