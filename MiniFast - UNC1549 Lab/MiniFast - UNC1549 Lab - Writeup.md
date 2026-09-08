@@ -23,6 +23,8 @@ the Q3 question get a little bit conmplicated, because the traffic is encrypted.
 
 we search for all the keys, and we copy them in another file, we upload that file into wireshark.
 
+- i recommend to read a little bit about TLS encryption and its keys -
+
 then we can get the DLL file from HTTP export, since now its decrypted, and lastly we calcul its hash.
 
 ---
