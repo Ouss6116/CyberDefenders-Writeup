@@ -19,6 +19,8 @@ This CyberDefenders lab is in the Endpoint Forensics category. The scenario has 
 
 To start, we load the `$MFT` into MFT Explorer, and that's where the first answer shows up.
 
+![Icon](Images/cb0301.png)
+
 ---
 
 ### Execution
