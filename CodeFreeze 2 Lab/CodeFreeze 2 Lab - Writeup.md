@@ -45,6 +45,8 @@ MFTECmd.exe -f "C:\Users\Administrator\Desktop\Start Here\Artifacts\disk image\C
 ```
 and found the answer in the output.
 
+![Icon](Images/cb0305.png)
+
 ---
 
 ### Command and Control
@@ -72,6 +74,8 @@ PECmd.exe -f "C:\Users\Administrator\Desktop\Start Here\Artifacts\disk image\C\W
 ```
 Then opened the result in Timeline Explorer and worked through the timeline to get the answer.
 
+![Icon](Images/cb0302.png)
+
 ---
 
 ### Exfiltration
@@ -90,6 +94,8 @@ Both answers are in the `.bash_history` of the only user on the box.
 
 Back to MFT Explorer for this last one.
 
+![Icon](Images/cb0303.png)
+
 ---
 
 ### Persistence
@@ -107,9 +113,13 @@ Since the persistence mechanism here is a cron job, I searched for the relevant 
 
 Reused the parsed MFT from Q3 for this one — much faster than searching from scratch.
 
+![Icon](Images/cb0304.png)
+
 **Q15/** \rootfs\etc\cron.d\syscheck
 
 Following on from Q14, the answer is in the script itself, found again through MFT Explorer.
+
+![Icon](Images/cb0306.png)
 
 ---
 
@@ -125,6 +135,8 @@ We found the encrypted ID and password in:
 
 A bit of research shows that the installed version of RustDesk has a known flaw: **CVE-2026-30785**. To actually crack the ID and password, you also need the `MachineGuid` from `HKLM\SOFTWARE\Microsoft\Cryptography`.
 
+![Icon](Images/cb0307.png)
+
 With the encrypted ID/password plus the MachineGuid, I ran it through AI to work out the decryption and get the final answer.
 
 ---
@@ -137,7 +149,13 @@ With the encrypted ID/password plus the MachineGuid, I ran it through AI to work
 This question and the last one (Q19) both come from the same log file:
 `C:\Users\Administrator\Desktop\Start Here\Artifacts\disk image\C\Windows\ServiceProfiles\LocalService\AppData\Roaming\RustDesk\log\server\RustDesk_rCURRENT.log`
 
-For Q17, I searched for "Connection opened" and took the first match. For Q19, I searched for "Connection closed" and took the last match.
+For Q17, I searched for "Connection opened" and took the first match. 
+
+![Icon](Images/cb0308.png)
+
+For Q19, I searched for "Connection closed" and took the last match.
+
+![Icon](Images/cb0309.png)
 
 One thing to watch out for: the question wants the answer in UTC, so you need to adjust the log's local timestamps by -7 hours.
 
@@ -148,12 +166,14 @@ One thing to watch out for: the question wants the answer in UTC, so you need to
 
 **Q18/** Credential for works
 
-**Q19/** 2026-04-10 12:26
+![Icon](Images/cb0310.png)
 
 Q18's answer is in:
 `C:\Users\Administrator\Desktop\Start Here\Artifacts\disk image\C\Users\nerfjtron\AppData\Roaming\Evernote\logs\evernote.log`
 
 Search by "title" and compare the timestamps against the start/end of the RustDesk session to line things up.
+
+**Q19/** 2026-04-10 12:26
 
 ---
 
