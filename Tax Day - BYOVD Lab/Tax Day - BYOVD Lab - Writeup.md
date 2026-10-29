@@ -56,6 +56,8 @@ and found the second in ProgramFiles and got the registred name from google
 
 with the search of ParentCommandLine we got it openning CMD
 
+AteraAgent.exe → AgentPackageRunCommandInteractive.exe → cmd.exe / powershell.exe → whoami, net, nltest...
+
 ![Icon](Images/cb0506.png)
 
 **Q08/** HKLM\System\CurrentControlSet\Control\Lsa
