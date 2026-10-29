@@ -16,7 +16,7 @@ before we start lets open the MFT file with MFT Explorer, and parse the logs wit
 
 both question got from Chrome history
 
-![Icon](Images/cb0401.png)
+![Icon](Images/cb0501.png)
 
 **Q02/** 2026-04-30 18:10
 
