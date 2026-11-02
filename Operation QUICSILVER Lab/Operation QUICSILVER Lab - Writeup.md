@@ -47,7 +47,7 @@ Then we follow the argument we found in Q04, which leads us to a file that we ca
 
 ![Icon](Images/cb0605.png)
 
-After that I launched the LNK "PDF" to get the `Winup.exe` malware file and calculated its SHA256.
+After that I launched the LNK "PDF" to get the `windowsupdate.exe` malware file and calculated its SHA256.
 
 > **Tip:** do this kind of step inside an isolated VM, never on your main machine.
 
