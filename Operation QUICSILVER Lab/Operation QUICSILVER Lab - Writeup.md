@@ -22,7 +22,7 @@
 
 **Q06/** agent/main.go
 
-**Q07/** https://regupdate.eamakfu49dc28wa.workers.dev/vere0zme82cad
+**Q07/** hxxps://regupdate.eamakfu49dc28wa.workers.dev/vere0zme82cad
 
 **Q08/** MySecretEncryptionKey2025!@#$%
 
